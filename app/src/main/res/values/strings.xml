@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Unofficial Kecipir</string>
+    <string name="title_activity_main">Unofficial Kecipir</string>
+
+    <string name="search">Cari</string>
+    <string name="search_hint">Cari sayuran organik</string>
+    <string name="shopping_chart">Shopping chart</string>
+    <string name="promo_products">Promo</string>
+    <string name="all_products">Semua Produk</string>
+    <string name="often_bought_with">Sering dibeli bersama</string>
+
+    <string name="dots_placeholder">●○○○○</string>
+    <string name="banner_placeholder">Banner placeholder</string>
+    <string name="banner">Banner</string>
+    <string name="category">Kategori</string>
+    <string name="product">Produk</string>
+    <string name="farmer">Petani</string>
+    <string name="grade">Tingkat keorganisan</string>
+    <string name="price">Harga</string>
+    <string name="discount">Diskon</string>
+
+    <string name="hello_world">Hello Square World!</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

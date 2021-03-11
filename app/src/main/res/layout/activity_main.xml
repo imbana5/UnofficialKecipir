@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clShippingDate"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:background="@color/lightgreen_200">
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBanners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/banner_placeholder"
+                android:contentDescription="@string/banner_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/banner_placeholder"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vpBanners"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@+id/banner_placeholder"
+                app:layout_constraintRight_toRightOf="@+id/banner_placeholder"
+                app:layout_constraintBottom_toBottomOf="@+id/banner_placeholder"
+                app:layout_constraintLeft_toLeftOf="@id/banner_placeholder" />
+
+            <TextView
+                android:id="@+id/tvBannerDots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/vpBanners"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="12sp"
+                android:textColor="@color/lightgreen_500"
+                android:text="@string/dots_placeholder"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategoriesTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategoriesBot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvPromoProducts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/promo_products"
+            android:textSize="@dimen/section_label_size"
+            android:padding="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPromoProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvAllProducts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all_products"
+            android:textSize="@dimen/section_label_size"
+            android:padding="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAllProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btDebug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Test Button" />
+
+    </LinearLayout>
+
+</ScrollView>

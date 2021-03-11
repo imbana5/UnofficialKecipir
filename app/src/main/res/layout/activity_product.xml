@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivProduct"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1"
+            android:contentDescription="@string/product"
+            app:layout_constraintTop_toTopOf="parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:background="@color/lightgray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/ivProduct">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clProductMainInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ivProduct"
+                android:padding="8dp"
+                android:layout_marginTop="@dimen/default_space_padding"
+                android:layout_marginBottom="@dimen/default_space_padding">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textStyle="bold"
+                    android:text="@string/product"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:singleLine="false"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:background="@color/red"
+                    android:text="@string/discount"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvOriginalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:singleLine="false"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                    app:layout_constraintLeft_toRightOf="@id/tvDiscount"
+                    android:text="@string/price"
+                    android:textColor="@color/gray"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvFinalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    app:layout_constraintTop_toBottomOf="@id/tvOriginalPrice"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textStyle="bold"
+                    android:text="@string/price"
+                    android:textColor="@color/red"
+                    android:textSize="18sp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightgray"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clFarmer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_space_padding"
+                android:layout_marginBottom="@dimen/default_space_padding">
+
+                <TextView
+                    android:id="@+id/tvFarmerLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:paddingTop="@dimen/default_space_padding"
+                    android:paddingStart="@dimen/default_space_padding"
+                    android:paddingEnd="@dimen/default_space_padding"
+                    android:text="@string/farmer"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/tvFarmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    app:layout_constraintTop_toBottomOf="@id/tvFarmerLabel"
+                    android:paddingStart="@dimen/default_space_padding"
+                    android:paddingEnd="@dimen/default_space_padding"
+                    android:paddingBottom="@dimen/default_space_padding"
+                    android:text="@string/farmer"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightgray"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clGrade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_space_padding"
+                android:layout_marginBottom="@dimen/default_space_padding"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tvGradeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:paddingBottom="4dp"
+                    android:text="@string/grade"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/tvGrade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    app:layout_constraintTop_toBottomOf="@id/tvGradeLabel"
+                    android:gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:text="@string/grade"
+                    android:textStyle="bold"
+                    android:textColor="@color/lightgray" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/lyOftenBoughtWith"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/default_space_padding">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightgray"/>
+
+                <TextView
+                    android:id="@+id/tvOftenBoughtWith"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/often_bought_with"
+                    android:textSize="@dimen/section_label_size"
+                    android:padding="8dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvOftenBoughtWith"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

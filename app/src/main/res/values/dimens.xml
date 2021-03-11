@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="box_inset_layout_padding">0dp</dimen>
+    <dimen name="inner_frame_layout_padding">4dp</dimen>
+    <dimen name="default_space_padding">8dp</dimen>
+
+    <dimen name="section_label_size">18sp</dimen>
+    <dimen name="default_product_size">168dp</dimen>
+
+</resources>
